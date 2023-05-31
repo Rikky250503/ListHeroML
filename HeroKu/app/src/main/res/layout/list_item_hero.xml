@@ -5,7 +5,7 @@
     android:layout_margin="6dp"
     android:elevation="32dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/ll_heroku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,32 +27,47 @@
             android:layout_height="wrap_content"
             android:text="nama"
             android:textStyle="bold"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:layout_below="@id/tv_id"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_toEndOf="@id/tv_nama"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="500px"
+            />
 
         <TextView
             android:id="@+id/tv_role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Asal Dareah"
+            android:text="Role"
             android:textSize="21sp"
+            android:layout_below="@id/tv_nama"
             android:textStyle="bold"/>
         <TextView
+            android:id="@+id/tv_lane"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="lane"
             android:textSize="21sp"
+            android:layout_below="@id/tv_role"
             android:textStyle="bold"
             />
         <TextView
-            android:id="@+id/tv_deskripsi_singkat"
+            android:id="@+id/tv_tahun_rilis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deskripsi Singkat"
+            android:text="Tahun_rilis"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:layout_below="@id/tv_lane"
+            android:textStyle="bold"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
 

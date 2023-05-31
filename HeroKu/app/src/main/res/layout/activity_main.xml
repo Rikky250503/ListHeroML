@@ -11,8 +11,7 @@
         android:id="@+id/rv_heroku"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/list_item_hero">
-    </androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/list_item_hero"></androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_tambah"

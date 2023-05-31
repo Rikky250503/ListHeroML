@@ -5,7 +5,6 @@ import java.util.List;
 public class ModelResponse {
 
     private  String kode,pesan;
-
     private List<ModelHero> data;
 
     public String getKode() {
