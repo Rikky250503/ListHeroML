@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar pbHero;
     private RecyclerView.Adapter adHero;
     private RecyclerView.LayoutManager lmHero;
-    private List<ModelHero> listKuliner = new ArrayList<>();
+    private List<ModelHero> listhero = new ArrayList<>();
 
 
     @Override
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {
                 String kode = response.body().getKode();
                 String pesan = response.body().getPesan();
-                listKuliner = response.body().getData();
+                listhero = response.body().getData();
 
-                adHero = new AdapterHero(MainActivity.this, listKuliner);
+                adHero = new AdapterHero(MainActivity.this, listhero);
                 rvHero.setAdapter(adHero);
                 adHero.notifyDataSetChanged();
 
