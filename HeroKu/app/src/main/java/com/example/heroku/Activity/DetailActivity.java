@@ -11,10 +11,10 @@ import com.example.heroku.R;
 import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
-
-    private List<ModelHero> listhero;
-
-    private TextView  tvId, tvNama, tvRole, tvLane, tvTahun_rilis, tvDes_hero, tvSkill1, tvDes1, tvSkill2, tvDes2, tvSkill3, tvDes3;
+//
+//    private List<ModelHero> listhero;
+//
+//    private TextView  tvId, tvNama, tvRole, tvLane, tvTahun_rilis, tvDes_hero, tvSkill1, tvDes1, tvSkill2, tvDes2, tvSkill3, tvDes3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

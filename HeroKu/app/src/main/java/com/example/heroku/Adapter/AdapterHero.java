@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.heroku.API.APIRequestData;
 import com.example.heroku.API.RetroServer;
 import com.example.heroku.Activity.MainActivity;
-import com.example.heroku.Activity.UbahActivity;
+
 import com.example.heroku.Model.ModelHero;
 import com.example.heroku.Model.ModelResponse;
 import com.example.heroku.R;
@@ -63,41 +63,6 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
         holder.tvSkill3.setText(MH.getSkill3());
         holder.tvDes3.setText(MH.getDes3());
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String id = MH.getId();
-//                String nama = MH.getNama();
-//                String role = MH.getRole();
-//                String lane = MH.getLane();
-//                String tahun_rilis = MH.getTahun_rilis();
-//                String des_hero = MH.getDes_hero();
-//                String skill1 = MH.getSkill1();
-//                String des1 = MH.getDes1();
-//                String skill2 = MH.getSkill2();
-//                String des2 = MH.getDes2();
-//                String skill3 = MH.getSkill3();
-//                String des3 = MH.getDes3();
-////                String des3 = MH.getId(); buat foto
-//
-////                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
-////                intent.putExtra("varnama",nama);
-////                intent.putExtra("varrole",role);
-////                intent.putExtra("varnama",lane);
-////                intent.putExtra("varnama",tahun_rilis);
-////                intent.putExtra("varnama",des_hero);
-////                intent.putExtra("varnama",skill1);
-////                intent.putExtra("varnama",des1);
-////                intent.putExtra("varnama",skill2);
-////                intent.putExtra("varnama",des2);
-////                intent.putExtra("varnama",skill3);
-////                intent.putExtra("varnama",des3);
-//////                intent.putExtra("varnama",nama);  buat foto jikalau bisa
-////                holder.itemView.getContext().startActivity(intent);
-//
-//            }
-//        });
-
     }
 
     @Override
@@ -109,7 +74,7 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
 
         TextView tvId, tvNama, tvRole, tvLane, tvTahun_rilis, tvDes_hero, tvSkill1, tvDes1, tvSkill2, tvDes2, tvSkill3, tvDes3;
 
-        ImageView iv_foto;
+
         public VHHero(@NonNull View itemView) {
             super(itemView);
 
@@ -118,14 +83,14 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
             tvRole = itemView.findViewById(R.id.tv_role1);
             tvLane = itemView.findViewById(R.id.tv_lane1);
             tvTahun_rilis = itemView.findViewById(R.id.tv_tahun_rilis1);
-//            tvDes_hero = itemView.findViewById(R.id.tv_isiDes);
-//            tvSkill1 = itemView.findViewById(R.id.tv_namaSkill1);
-//            tvDes1 = itemView.findViewById(R.id.tv_isiDesSkill1);
-//            tvSkill2 = itemView.findViewById(R.id.tv_namaSkill2);
-//            tvDes2 = itemView.findViewById(R.id.tv_isiDesSkill2);
-//            tvSkill3 = itemView.findViewById(R.id.tv_namaSkill3);
-//            tvDes3 = itemView.findViewById(R.id.tv_isiDesSkill3);
-//            iv_foto = itemView.findViewById(R.id.iv_foto);
+            tvDes_hero = itemView.findViewById(R.id.tv_isiDes);
+            tvSkill1 = itemView.findViewById(R.id.tv_namaSkill1);
+            tvDes1 = itemView.findViewById(R.id.tv_isiDesSkill1);
+            tvSkill2 = itemView.findViewById(R.id.tv_namaSkill2);
+            tvDes2 = itemView.findViewById(R.id.tv_isiDesSkill2);
+            tvSkill3 = itemView.findViewById(R.id.tv_namaSkill3);
+            tvDes3 = itemView.findViewById(R.id.tv_isiDesSkill3);
+
         }
     }
     private  void hapusHero(String idHero){
