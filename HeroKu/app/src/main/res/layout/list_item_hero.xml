@@ -17,12 +17,12 @@
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Id"
+        android:text="id"
         android:textSize="21sp"
         android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/tv_nama"
+            android:id="@+id/tv_nama1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="nama"
@@ -34,37 +34,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_launcher"
-            android:layout_toEndOf="@id/tv_nama"
+            android:layout_toEndOf="@id/tv_nama1"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="500px"
             />
 
         <TextView
-            android:id="@+id/tv_role"
+            android:id="@+id/tv_role1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Role"
             android:textSize="21sp"
-            android:layout_below="@id/tv_nama"
+            android:layout_below="@id/tv_nama1"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tv_lane"
+            android:id="@+id/tv_lane1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="lane"
             android:textSize="21sp"
-            android:layout_below="@id/tv_role"
+            android:layout_below="@id/tv_role1"
             android:textStyle="bold"
             />
         <TextView
-            android:id="@+id/tv_tahun_rilis"
+            android:id="@+id/tv_tahun_rilis1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tahun_rilis"
             android:ellipsize="end"
             android:maxLines="2"
             android:textSize="21sp"
-            android:layout_below="@id/tv_lane"
+            android:layout_below="@id/tv_lane1"
             android:textStyle="bold"/>
 
     </RelativeLayout>

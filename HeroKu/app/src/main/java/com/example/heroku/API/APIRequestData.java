@@ -1,6 +1,5 @@
 package com.example.heroku.API;
 
-import com.example.heroku.Model.ModelHero;
 import com.example.heroku.Model.ModelResponse;
 
 import retrofit2.Call;
@@ -52,6 +51,6 @@ public interface APIRequestData {
 
     @FormUrlEncoded
     @POST("delete.php")
-    Call<ModelHero> ardDelete(
+    Call<ModelResponse> ardDelete(
             @Field("id") String id);
 }
