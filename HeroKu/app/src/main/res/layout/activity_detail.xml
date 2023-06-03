@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
     <ImageView
-        android:id="@+id/iv_foto"
+        android:id="@+id/iv_foto_detail"
         android:layout_width="match_parent"
         android:layout_height="400px"
         android:src="@mipmap/ic_launcher" />
@@ -21,18 +20,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Nama                : "
-        android:layout_below="@id/iv_foto"
+        android:text="Nama                 : "
+        android:layout_below="@id/iv_foto_detail"
         android:textSize="21sp"
 android:layout_marginTop="10px"
         />
     <TextView
-        android:id="@+id/tv_nama1"
+        android:id="@+id/tv_Nama2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="isi nama"
         android:layout_marginTop="10px"
-        android:layout_below="@id/iv_foto"
+        android:layout_below="@id/iv_foto_detail"
         android:layout_toEndOf="@id/tv_nama"
         android:textSize="21sp"
         />
@@ -47,11 +46,11 @@ android:layout_marginTop="10px"
         android:textSize="21sp"
         />
     <TextView
-        android:id="@+id/tv_role1"
+        android:id="@+id/tv_Role2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="isi role"
-        android:layout_below="@id/tv_nama"
+        android:layout_below="@id/tv_Nama2"
         android:layout_toEndOf="@id/tv_role"
         android:textSize="21sp"
         />
@@ -60,17 +59,17 @@ android:layout_marginTop="10px"
         android:id="@+id/tv_lane"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lane                  : "
+        android:text="Lane                   : "
         android:layout_below="@id/tv_role"
         android:textStyle="bold"
         android:textSize="21sp"
         />
     <TextView
-        android:id="@+id/tv_lane1"
+        android:id="@+id/tv_Lane2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="isi lane"
-        android:layout_below="@id/tv_role"
+        android:layout_below="@id/tv_Role2"
         android:layout_toEndOf="@id/tv_lane"
         android:textSize="21sp"
         />
@@ -85,11 +84,11 @@ android:layout_marginTop="10px"
         android:textSize="21sp"
         />
     <TextView
-        android:id="@+id/tv_tahun_rilis1"
+        android:id="@+id/tv_tahun_rilis2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="isi tahun rilis"
-        android:layout_below="@id/tv_lane"
+        android:layout_below="@id/tv_Lane2"
         android:layout_toEndOf="@id/tv_tahun_rilis"
         android:textSize="21sp" />
 
@@ -100,7 +99,7 @@ android:layout_marginTop="10px"
         android:text="Deskripsi Hero:"
         android:textSize="21sp"
         android:textStyle="bold"
-        android:layout_below="@id/tv_tahun_rilis"/>
+        android:layout_below="@id/tv_tahun_rilis2"/>
     <TextView
         android:id="@+id/tv_isiDes"
         android:layout_width="match_parent"
@@ -112,7 +111,7 @@ android:layout_marginTop="10px"
         android:id="@+id/tv_skill1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKill 1               :"
+        android:text="SKill 1                 :"
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_below="@id/tv_isiDes"/>
@@ -146,7 +145,7 @@ android:layout_marginTop="10px"
         android:id="@+id/tv_skill2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKill 2               :"
+        android:text="SKill 2                 :"
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_below="@id/tv_isiDesSkill1"/>
@@ -180,7 +179,7 @@ android:layout_marginTop="10px"
         android:id="@+id/tv_skill3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKill 3               :"
+        android:text="SKill 3                  :"
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_below="@id/tv_isiDesSkill2"/>

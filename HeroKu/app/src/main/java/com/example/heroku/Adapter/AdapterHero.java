@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.heroku.API.APIRequestData;
 import com.example.heroku.API.RetroServer;
+import com.example.heroku.Activity.DetailActivity;
 import com.example.heroku.Activity.MainActivity;
 
 import com.example.heroku.Model.ModelHero;
@@ -41,7 +42,7 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
 
     @NonNull
     @Override
-    public AdapterHero.VHHero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VHHero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View varView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_hero,parent,false);
         return new VHHero(varView);
     }
@@ -55,13 +56,44 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
         holder.tvRole.setText(MH.getRole());
         holder.tvLane.setText(MH.getLane());
         holder.tvTahun_rilis.setText(MH.getTahun_rilis());
-        holder.tvDes_hero.setText(MH.getDes_hero());
-        holder.tvSkill1.setText(MH.getSkill1());
-        holder.tvDes1.setText(MH.getDes1());
-        holder.tvSkill2.setText(MH.getSkill2());
-        holder.tvDes2.setText(MH.getDes2());
-        holder.tvSkill3.setText(MH.getSkill3());
-        holder.tvDes3.setText(MH.getDes3());
+//        holder.tvDes_hero.setText(MH.getDes_hero());
+//        holder.tvSkill1.setText(MH.getSkill1());
+//        holder.tvDes1.setText(MH.getDes1());
+//        holder.tvSkill2.setText(MH.getSkill2());
+//        holder.tvDes2.setText(MH.getDes2());
+//        holder.tvSkill3.setText(MH.getSkill3());
+//        holder.tvDes3.setText(MH.getDes3());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = MH.getNama();
+                String role = MH.getRole();
+                String lane = MH.getLane();
+                String tahun_rilis = MH.getTahun_rilis();
+                String des_hero = MH.getDes_hero();
+                String skill1 = MH.getSkill1();
+                String des1 = MH.getDes1();
+                String skill2 = MH.getSkill2();
+                String des2 = MH.getDes2();
+                String skill3 = MH.getSkill3();
+                String des3 = MH.getDes3();
+
+                Intent intent  = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("varNama",nama);
+                intent.putExtra("varRole",role);
+                intent.putExtra("varLane",lane);
+                intent.putExtra("varTahun_rilis",tahun_rilis);
+                intent.putExtra("varDes_hero",des_hero);
+                intent.putExtra("varSkill1",skill1);
+                intent.putExtra("varDes1",des1);
+                intent.putExtra("varSkill2",skill2);
+                intent.putExtra("varDes2",des2);
+                intent.putExtra("varSkill3",skill3);
+                intent.putExtra("varDes3",des3);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
 
     }
 
@@ -83,13 +115,13 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
             tvRole = itemView.findViewById(R.id.tv_role1);
             tvLane = itemView.findViewById(R.id.tv_lane1);
             tvTahun_rilis = itemView.findViewById(R.id.tv_tahun_rilis1);
-            tvDes_hero = itemView.findViewById(R.id.tv_isiDes);
-            tvSkill1 = itemView.findViewById(R.id.tv_namaSkill1);
-            tvDes1 = itemView.findViewById(R.id.tv_isiDesSkill1);
-            tvSkill2 = itemView.findViewById(R.id.tv_namaSkill2);
-            tvDes2 = itemView.findViewById(R.id.tv_isiDesSkill2);
-            tvSkill3 = itemView.findViewById(R.id.tv_namaSkill3);
-            tvDes3 = itemView.findViewById(R.id.tv_isiDesSkill3);
+//            tvDes_hero = itemView.findViewById(R.id.tv_isiDes);
+//            tvSkill1 = itemView.findViewById(R.id.tv_namaSkill1);
+//            tvDes1 = itemView.findViewById(R.id.tv_isiDesSkill1);
+//            tvSkill2 = itemView.findViewById(R.id.tv_namaSkill2);
+//            tvDes2 = itemView.findViewById(R.id.tv_isiDesSkill2);
+//            tvSkill3 = itemView.findViewById(R.id.tv_namaSkill3);
+//            tvDes3 = itemView.findViewById(R.id.tv_isiDesSkill3);
 
         }
     }
