@@ -4,16 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.heroku.Model.ModelHero;
 import com.example.heroku.R;
-
-import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
 
     private TextView  tvNama, tvRole, tvLane, tvTahun_rilis, tvDes_hero, tvSkill1, tvDes1, tvSkill2, tvDes2, tvSkill3, tvDes3;
+    private ImageView ivFotoDetail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class DetailActivity extends AppCompatActivity {
         tvDes2 = findViewById(R.id.tv_isiDesSkill2);
         tvSkill3 = findViewById(R.id.tv_namaSkill3);
         tvDes3 = findViewById(R.id.tv_isiDesSkill3);
+        ivFotoDetail = findViewById(R.id.iv_foto_detail);
 
         Intent intent = getIntent();
         String nama = intent.getStringExtra("varNama");
@@ -44,6 +47,16 @@ public class DetailActivity extends AppCompatActivity {
         String des2 = intent.getStringExtra("varDes2");
         String skill3 = intent.getStringExtra("varSkill3");
         String des3 = intent.getStringExtra("varDes3");
+        String foto = getIntent().getStringExtra("varFoto");
+//        if (foto != null) {
+//            ImageView imageView = findViewById(R.id.iv_foto_detail);
+//            Glide.with(this).load(foto).into(imageView);
+//        }
+//        else{
+//           String foto1 = modelHero.getFoto();
+//           ImageView imageView1 = findViewById(R.id.iv_foto_detail);
+//           Glide.with(this).load(foto1).into(imageView1);
+//        }
 
         tvNama.setText(nama);
         tvRole.setText(role);
@@ -56,5 +69,7 @@ public class DetailActivity extends AppCompatActivity {
         tvDes2.setText(des2);
         tvSkill3.setText(skill3);
         tvDes3.setText(des3);
+
+
     }
 }

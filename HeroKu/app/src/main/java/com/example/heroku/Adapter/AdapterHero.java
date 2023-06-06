@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.heroku.API.APIRequestData;
 import com.example.heroku.API.RetroServer;
 import com.example.heroku.Activity.DetailActivity;
@@ -40,6 +42,7 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
     }
 
 
+
     @NonNull
     @Override
     public VHHero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -56,6 +59,9 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
         holder.tvRole.setText(MH.getRole());
         holder.tvLane.setText(MH.getLane());
         holder.tvTahun_rilis.setText(MH.getTahun_rilis());
+        holder.bind(new ModelHero(MH.getFoto()));
+
+
 //        holder.tvDes_hero.setText(MH.getDes_hero());
 //        holder.tvSkill1.setText(MH.getSkill1());
 //        holder.tvDes1.setText(MH.getDes1());
@@ -78,6 +84,7 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
                 String des2 = MH.getDes2();
                 String skill3 = MH.getSkill3();
                 String des3 = MH.getDes3();
+                String foto = MH.getFoto();
 
                 Intent intent  = new Intent(holder.itemView.getContext(), DetailActivity.class);
                 intent.putExtra("varNama",nama);
@@ -91,6 +98,7 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
                 intent.putExtra("varDes2",des2);
                 intent.putExtra("varSkill3",skill3);
                 intent.putExtra("varDes3",des3);
+                intent.putExtra("VarFoto",foto);
                 holder.itemView.getContext().startActivity(intent);
             }
         });
@@ -105,7 +113,8 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
     public class VHHero extends  RecyclerView.ViewHolder{
 
         TextView tvId, tvNama, tvRole, tvLane, tvTahun_rilis, tvDes_hero, tvSkill1, tvDes1, tvSkill2, tvDes2, tvSkill3, tvDes3;
-
+        ImageView ivFotoMain;
+        private  ModelHero foto;
 
         public VHHero(@NonNull View itemView) {
             super(itemView);
@@ -115,13 +124,14 @@ public class AdapterHero extends RecyclerView.Adapter<AdapterHero.VHHero>  {
             tvRole = itemView.findViewById(R.id.tv_role1);
             tvLane = itemView.findViewById(R.id.tv_lane1);
             tvTahun_rilis = itemView.findViewById(R.id.tv_tahun_rilis1);
-//            tvDes_hero = itemView.findViewById(R.id.tv_isiDes);
-//            tvSkill1 = itemView.findViewById(R.id.tv_namaSkill1);
-//            tvDes1 = itemView.findViewById(R.id.tv_isiDesSkill1);
-//            tvSkill2 = itemView.findViewById(R.id.tv_namaSkill2);
-//            tvDes2 = itemView.findViewById(R.id.tv_isiDesSkill2);
-//            tvSkill3 = itemView.findViewById(R.id.tv_namaSkill3);
-//            tvDes3 = itemView.findViewById(R.id.tv_isiDesSkill3);
+            ivFotoMain  = itemView.findViewById(R.id.iv_foto);
+
+        }
+        public void bind (ModelHero foto){
+            this.foto = foto;
+            Glide.with(itemView.getContext())
+                    .load(foto.getFoto())
+                    .into(ivFotoMain);
 
         }
     }
