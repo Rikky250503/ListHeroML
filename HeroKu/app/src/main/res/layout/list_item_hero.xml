@@ -8,9 +8,9 @@
     <RelativeLayout
         android:id="@+id/ll_heroku"
         android:layout_width="match_parent"
-        android:layout_height="500px"
+        android:layout_height="600px"
         android:padding="6dp"
-        android:background="@drawable/backmain"
+        android:background="@drawable/bglist"
         android:orientation="vertical">
 
         <TextView
@@ -26,6 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="nama"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="25dp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="21sp"
@@ -33,18 +35,21 @@
 
         <ImageView
             android:id="@+id/iv_foto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"
-            android:layout_marginTop="35px"
-            android:layout_marginStart="500px"
-            android:layout_toEndOf="@id/tv_lane1"/>
+            android:layout_marginTop="100px"
+            android:layout_marginBottom="100px"
+            android:layout_marginStart="200px"
+            android:layout_marginEnd="100px"
+            android:layout_toEndOf="@id/tv_tahun_rilis1"/>
 
         <TextView
             android:id="@+id/tv_role1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Role"
+            android:layout_marginStart="45dp"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:layout_below="@id/tv_nama1"
@@ -54,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="lane"
+            android:layout_marginStart="45dp"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:layout_below="@id/tv_role1"
@@ -63,11 +69,81 @@
             android:id="@+id/tv_tahun_rilis1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
             android:text="Tahun_rilis"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:layout_below="@id/tv_lane1"
             android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_des_hero1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listskill1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listdes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listskill2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listdes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listskill3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_listdes3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_linkFoto"
+            android:layout_below="@id/iv_foto"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </RelativeLayout>
 

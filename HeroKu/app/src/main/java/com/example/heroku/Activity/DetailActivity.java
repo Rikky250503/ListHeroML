@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.example.heroku.Model.ModelHero;
 import com.example.heroku.R;
+import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -47,16 +46,7 @@ public class DetailActivity extends AppCompatActivity {
         String des2 = intent.getStringExtra("varDes2");
         String skill3 = intent.getStringExtra("varSkill3");
         String des3 = intent.getStringExtra("varDes3");
-        String foto = getIntent().getStringExtra("varFoto");
-//        if (foto != null) {
-//            ImageView imageView = findViewById(R.id.iv_foto_detail);
-//            Glide.with(this).load(foto).into(imageView);
-//        }
-//        else{
-//           String foto1 = modelHero.getFoto();
-//           ImageView imageView1 = findViewById(R.id.iv_foto_detail);
-//           Glide.with(this).load(foto1).into(imageView1);
-//        }
+        String gambar = getIntent().getStringExtra("varFoto");
 
         tvNama.setText(nama);
         tvRole.setText(role);
@@ -69,7 +59,7 @@ public class DetailActivity extends AppCompatActivity {
         tvDes2.setText(des2);
         tvSkill3.setText(skill3);
         tvDes3.setText(des3);
-
+        Picasso.get().load(gambar).into(ivFotoDetail);
 
     }
 }

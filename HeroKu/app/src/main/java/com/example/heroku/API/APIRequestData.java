@@ -16,7 +16,6 @@ public interface APIRequestData {
     @FormUrlEncoded
     @POST("create.php")
     Call<ModelResponse> ardCreate(
-            @Field("id") String id,
             @Field("nama") String nama,
             @Field("role") String role,
             @Field("lane") String lane,

@@ -4,10 +4,6 @@ public class ModelHero {
 
     private  String id, nama, role, lane, tahun_rilis, des_hero, skill1, des1, skill2, des2, skill3,des3,foto;
 
-    public ModelHero(String foto) {
-        this.foto = foto;
-    }
-
     public String getId() {
         return id;
     }

@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="6dp"
-    android:orientation="vertical"
-    tools:context=".Activity.TambahActivity">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/walltambah"
+        android:padding="6dp"
+        tools:context=".Activity.TambahActivity">
 
     <TextView
         android:id="@+id/tv_judul"
@@ -19,109 +19,193 @@
         android:layout_height="wrap_content"
         android:text="Tambah Data"
         android:textSize="40sp"
-        android:layout_marginTop="10px"
+        android:textColor="@color/white"
+        android:layout_marginTop="70px"
         android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
         />
 
-    <EditText
-        android:id="@+id/et_nama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="21sp"
-        android:layout_marginTop="10px"
-        android:hint=" Nama Hero" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@drawable/laylagif"
+            />
 
-    <EditText
-        android:id="@+id/et_role"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=" Role"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_lane"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=" Lane"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_tahun_rilis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tahun Rilis"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_des_hero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Deskripsi hero"
-        android:layout_marginTop="10px"
-        android:maxLines="4"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_skill1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Skill1"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_Des1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Deskripsi Skill"
-        android:maxLines="4"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_skill2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Skill2"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_Des2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Deskripsi Skill"
-        android:maxLines="4"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_skill3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Skill3"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
-    <EditText
-        android:id="@+id/et_Des3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Deskripsi Skill"
-        android:maxLines="4"
-        android:layout_marginTop="10px"
-        android:textSize="21sp"/>
+        <EditText
+            android:id="@+id/et_tambahNamaHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Hero"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Role"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+        <EditText
+            android:id="@+id/et_tambahLane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lane"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahTahunRilis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TahunRilis"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahDesHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi Hero"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahSkill1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 1"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahDes1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 1"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahSkill2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 2"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahDes2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 2"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahSkill3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 3"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahDes3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 3"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tambahFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link Foto"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/black"
+            android:maxLength="100"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+
 <!--    <EditText-->
-<!--        android:id="@+id/et_Des3"-->
+<!--        android:id="@+id/et_Foto"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Deskripsi Skill"-->
-<!--        android:maxLines="3"-->
+<!--        android:hint="Link Foto"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:maxLines="4"-->
 <!--        android:textSize="21sp"/>-->
 
-    <Button
-        android:id="@+id/btn_tambah"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Tambah"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_corner"
         android:text="Tambah"
-
         android:textSize="21sp"/>
     </LinearLayout>
 </ScrollView>

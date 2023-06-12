@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="6dp"
+    android:background="@drawable/bghitam"
     tools:context=".Activity.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,8 +22,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="6dp"
         android:src="@drawable/baseline_circle_24"
-        android:tint="@null"
-        android:contentDescription="TODO" />
+        android:tint="@null"/>
     <ProgressBar
         android:id="@+id/pb_heroku"
         android:layout_width="wrap_content"

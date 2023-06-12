@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/wallubah"
         android:orientation="vertical">
 
         <TextView
@@ -22,98 +23,175 @@
             android:layout_alignParentStart="true"
             android:layout_gravity="center_horizontal"/>
 
-        <EditText
-            android:id="@+id/et_nama"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_marginTop="10px"
-            android:hint=" Nama Hero" />
+            android:src="@drawable/lele"
+            android:layout_margin="50dp"
+            />
 
         <EditText
-            android:id="@+id/et_role"
+            android:id="@+id/et_ubahNamaHero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Role"
+            android:hint="Nama Hero"
             android:layout_marginTop="10px"
-            android:textSize="21sp"/>
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
         <EditText
-            android:id="@+id/et_lane"
+            android:id="@+id/et_ubahRole"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Lane"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
+            android:hint="Role"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+        />
+
         <EditText
-            android:id="@+id/et_tahun_rilis"
+            android:id="@+id/et_ubahLane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lane"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahTahunRilis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tahun Rilis"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_des_hero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Deskripsi hero"
-            android:layout_marginTop="10px"
-            android:maxLines="4"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_skill1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Skill1"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_Des1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Deskripsi Skill"
-            android:maxLines="4"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_skill2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Skill2"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_Des2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Deskripsi Skill"
-            android:maxLines="4"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_skill3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Skill3"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <EditText
-            android:id="@+id/et_Des3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Deskripsi Skill"
-            android:maxLines="4"
-            android:layout_marginTop="10px"
-            android:textSize="21sp"/>
-        <!--    <EditText-->
-        <!--        android:id="@+id/et_Des3"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:hint="Deskripsi Skill"-->
-        <!--        android:maxLines="3"-->
-        <!--        android:textSize="21sp"/>-->
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
 
-        <Button
-            android:id="@+id/btn_tambah"
+        <EditText
+            android:id="@+id/et_ubahDesHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi Hero"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahSkill1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 1"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahDes1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 1"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahSkill2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 2"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahDes2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 2"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahSkill3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skill 3"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahDes3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi 3"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_ubahFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link Foto"
+            android:layout_marginTop="20px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/black"
+            android:maxLines="4"
+            android:background="@drawable/bg_corner"
+            android:backgroundTint="#86B3E4"
+            android:padding="10dp"
+            />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Update"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"

@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.heroku.API.APIRequestData;
 import com.example.heroku.API.RetroServer;
-import com.example.heroku.Activity.TambahActivity;
+
 import com.example.heroku.Adapter.AdapterHero;
 import com.example.heroku.Model.ModelHero;
 import com.example.heroku.Model.ModelResponse;
@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity {
         fabTambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TambahActivity.class));
-
+                startActivity(new Intent(MainActivity.this,TambahActivity.class));
             }
         });
 
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ModelResponse> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server"+t.getMessage(), Toast.LENGTH_SHORT).show();
                 pbHero.setVisibility(View.GONE);
             }
         });
