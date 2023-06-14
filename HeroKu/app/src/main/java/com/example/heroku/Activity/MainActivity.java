@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 adHero = new AdapterHero(MainActivity.this, listHero);
                 rvHero.setAdapter(adHero);
                 adHero.notifyDataSetChanged();
-
+z
                 pbHero.setVisibility(View.GONE);
             }
 
